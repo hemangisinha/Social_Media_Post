@@ -132,7 +132,7 @@ def main():
                 
                 with tab1:
                     st.subheader("LinkedIn Post")
-                    st.text_area("", value=posts["linkedin"], height=150, key="linkedin_post")
+                    st.text_area("LinkedIn Post Content", value=posts["linkedin"], height=150, key="linkedin_post", label_visibility="collapsed")
                     if st.button("📋 Copy LinkedIn Post"):
                         st.success("LinkedIn post copied to clipboard!")
                 
@@ -141,13 +141,13 @@ def main():
                     char_count = len(posts["twitter"])
                     color = "green" if char_count <= 280 else "red"
                     st.markdown(f"Character count: <span style='color: {color}'>{char_count}/280</span>", unsafe_allow_html=True)
-                    st.text_area("", value=posts["twitter"], height=100, key="twitter_post")
+                    st.text_area("Twitter Post Content", value=posts["twitter"], height=100, key="twitter_post", label_visibility="collapsed")
                     if st.button("📋 Copy Twitter Post"):
                         st.success("Twitter post copied to clipboard!")
                 
                 with tab3:
                     st.subheader("WhatsApp Message")
-                    st.text_area("", value=posts["whatsapp"], height=150, key="whatsapp_post")
+                    st.text_area("WhatsApp Message Content", value=posts["whatsapp"], height=150, key="whatsapp_post", label_visibility="collapsed")
                     if st.button("📋 Copy WhatsApp Message"):
                         st.success("WhatsApp message copied to clipboard!")
     
